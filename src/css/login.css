@@ -1,0 +1,137 @@
+/* Home Page */
+
+.login{
+    position: relative;
+    height: 100vh;
+    background: url('https://assets.nflxext.com/ffe/siteui/vlv3/8f3e38a9-1c2c-4818-99b5-2d9bdff9ad1d/96d29058-fe9b-4f8e-aa49-4c7af385934b/IN-en-20220124-popsignuptwoweeks-perspective_alpha_website_large.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.login__gradient{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,.4);
+    background-image: linear-gradient(to top,rgba(0,0,0,.8) 0,rgba(0,0,0,0) 60%,rgba(0,0,0,.8) 100%);
+    z-index: 1;
+}
+
+.login__logo{
+    width: 170px;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+}
+
+.login__button{
+    background-color: #fc0a0a;
+    padding: 10px 20px;
+    color: #fff;
+    border: 0;
+    text-transform: capitalize;
+    border-radius: 5px;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+}
+
+.login__body{
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+
+.login__body h1{ 
+    font-size: 3.125rem;
+    margin-bottom: 22px;
+}
+
+.login__body h2{
+    font-size: 1.625rem;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.login__body h3{
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.login__body .login__form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login__body .login__form input{
+    width: 500px;
+    height: 60px;
+    padding: 0 15px;
+    font-size: 20px;
+    border: solid 1px #8c8c8c;
+}
+
+.login__body .login__form button{
+    /* width: 300px; */
+    font-size: 20px;
+    height: 60px;
+    padding: 0 15px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    color: #fff;
+    border: solid 1px #8c8c8c;
+    background-color: #f40612;
+    cursor: pointer;
+}
+
+
+/* Sign Up Screen */
+
+.signUpScreen{
+    max-width: 500px;
+    padding: 70px;
+    background-color: rgba(0,0,0,.8);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.signUpScreen form{
+    display: grid;
+    flex-direction: column;
+}
+
+.signUpScreen form input{
+    outline: 0;
+    height: 40px;
+    border: 0;
+    padding: 5px 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.signUpScreen form button{
+    font-size: 16px;
+    color: #fff;
+    background-color: #f40612;
+    border: 0;
+    border-radius: 5px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.signUpScreen form h4{
+    color: gray;
+}
+
+.signUpScreen form h4 span{
+    color: #fff;
+}
+.signUpScreen form h4:hover span{
+    text-decoration: underline;
+}
+

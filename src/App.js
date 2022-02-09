@@ -5,11 +5,10 @@ import Login from './components/Login';
 import { login, logout, selectUser } from './features/userSlice';
 import { auth } from './firebase';
 import './index.css';
-
 function App() {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
-
+  
   useEffect(() => {
     const unsucscribe = auth.onAuthStateChanged(user => {
       if (user) {
@@ -26,7 +25,7 @@ function App() {
     });
     return unsucscribe;
   }, []);
-
+  
   return (
     <div className="App">
       {

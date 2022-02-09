@@ -18,6 +18,8 @@ function Banner() {
         fetchdata();
     }, []);
 
+    let temp = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
+
     console.log('movie', movie);
     return (
         <div className='banner' style={{ backgroundImage: `url('https://image.tmdb.org/t/p/original${movie?.backdrop_path}')`, backgroundPosition: 'top', backgroundSize: '100% 100vh', backgroundRepeat: 'no-repeat' }}>
@@ -29,7 +31,7 @@ function Banner() {
                 </div>
                 <div className="banner__description">
                     <p>
-                        {movie?.overview || 'No Overview....'}
+                        {movie?.overview && movie?.overview.slice(0, 300)  ||'No Overview....'}
                     </p>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-const TMDB_API_KEY = process.env.NODE_ENV === "development" && process.env.REACT_APP_TMDB_API_KEY;
+const TMDB_API_KEY = process.env.NODE_ENV === "development" ? process.env.REACT_APP_TMDB_API_KEY : process.env.REACT_APP_TMDB_API_KEY;
 
 const userRequests = {
     fetchTrending: `/trending/all/week?api_key=${TMDB_API_KEY}&languages=en-US`,

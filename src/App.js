@@ -5,10 +5,13 @@ import Login from './components/Login';
 import { login, logout, selectUser } from './features/userSlice';
 import { auth } from './firebase';
 import './index.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
-  
+
   useEffect(() => {
     const unsucscribe = auth.onAuthStateChanged(user => {
       if (user) {
@@ -25,9 +28,19 @@ function App() {
     });
     return unsucscribe;
   }, []);
-  
+
   return (
     <div className="App">
+      <ToastContainer position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       {
         !user ? (<Login />) : (<Home />)
       }

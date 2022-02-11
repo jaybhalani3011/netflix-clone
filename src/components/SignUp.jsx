@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { toast } from 'react-toastify';
 import '../css/login.css';
 import { auth } from '../firebase';
 
@@ -12,9 +13,11 @@ function SignUp() {
             emailRef.current.value,
             passwordRef.current.value
         ).then(authUser => {
-            console.log(authUser)
+            toast.success("User Registered and Signed In");
+            // console.log(authUser)
         }).catch(err => {
-            alert(err.message)
+            toast.error(err.message)
+            // alert(err.message)
         })
     }
 
@@ -24,9 +27,11 @@ function SignUp() {
             emailRef.current.value,
             passwordRef.current.value
         ).then(authUser => {
-            console.log(authUser)
+            toast.success("User Signed In");
+            // console.log(authUser)
         }).catch(err => {
-            alert(err.message)
+            toast.error(err.message)
+            // alert(err.message)
         })
     }
     return (
